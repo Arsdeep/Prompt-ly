@@ -50,7 +50,31 @@ Prompt-ly is a powerful tool designed to assist users in creating and refining p
    pip install -r requirements.txt
    ```
 
-4. **Run the App**
+4. **Create the Secrets Configuration**
+
+   Create a directory named `.streamlit` in the root of the project if it doesn't exist:
+
+   ```bash
+   mkdir .streamlit
+   ```
+
+   Inside the `.streamlit` directory, create a file named `secrets.toml`:
+
+   ```bash
+   touch .streamlit/secrets.toml
+   ```
+
+   Open `secrets.toml` and add your API keys:
+
+   ```toml
+   [general]
+   GEMINI_API_KEY = "your_gemini_api_key_here"
+   COSTAR_PROMPT = "your_costar_prompt_here"
+   ```
+
+   Replace `"your_gemini_api_key_here"` and `"your_costar_prompt_here"` with your actual API key and prompt.
+
+5. **Run the App**
 
    ```bash
    streamlit run streamlit_app.py
